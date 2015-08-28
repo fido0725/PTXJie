@@ -18,6 +18,7 @@
 		5FE2A3EE1B84714F001F53F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FE2A3EC1B84714F001F53F3 /* LaunchScreen.xib */; };
 		5FE2A3FA1B84714F001F53F3 /* PtxJIETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A3F91B84714F001F53F3 /* PtxJIETests.m */; };
 		5FE2A4101B848636001F53F3 /* PtxCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A40F1B848636001F53F3 /* PtxCalendar.m */; };
+		5FEDECC51B90581D0062655D /* CalendarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEDECC41B90581D0062655D /* CalendarCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		5FE2A40D1B8482C3001F53F3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5FE2A40E1B848636001F53F3 /* PtxCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtxCalendar.h; sourceTree = "<group>"; };
 		5FE2A40F1B848636001F53F3 /* PtxCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PtxCalendar.m; sourceTree = "<group>"; };
+		5FEDECC31B90581D0062655D /* CalendarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarCollectionViewCell.h; sourceTree = "<group>"; };
+		5FEDECC41B90581D0062655D /* CalendarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				5FE2A3E21B84714F001F53F3 /* AppDelegate.m */,
 				5FE2A3E41B84714F001F53F3 /* ViewController.h */,
 				5FE2A3E51B84714F001F53F3 /* ViewController.m */,
+				5FEDECC31B90581D0062655D /* CalendarCollectionViewCell.h */,
+				5FEDECC41B90581D0062655D /* CalendarCollectionViewCell.m */,
 				5FE2A3E71B84714F001F53F3 /* Main.storyboard */,
 				5FE2A3EA1B84714F001F53F3 /* Images.xcassets */,
 				5FE2A3EC1B84714F001F53F3 /* LaunchScreen.xib */,
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FEDECC51B90581D0062655D /* CalendarCollectionViewCell.m in Sources */,
 				3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */,
 				5FE2A3E61B84714F001F53F3 /* ViewController.m in Sources */,
 				5FA4BDA21B8D563600ADCFFB /* NSDate+CalendarConvert.m in Sources */,

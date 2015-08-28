@@ -31,4 +31,7 @@
 -(NSDate *)specialDayBeforeTodayWithNum:(NSInteger)day;
 
 -(NSDate *)specialDayAfterTodayWithNum:(NSInteger)day;
+
+-(NSDateComponents *)daysCompareWithDate:(NSDate*)endDate;
+
 @end

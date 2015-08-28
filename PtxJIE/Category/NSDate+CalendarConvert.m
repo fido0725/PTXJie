@@ -103,4 +103,12 @@
 {
     return [self specialDayBetweenTodayWithNum:day];
 }
+
+-(NSDateComponents *)daysCompareWithDate:(NSDate*)endDate
+{
+    NSCalendar *calendar = [NSDate shareCalendarGeo];
+    //NSInteger flag = NSCalendarUnitDay|NSCalendarUnitMonth;
+    NSDateComponents *comp = [ calendar components:NSCalendarUnitDay fromDate:self toDate:endDate options:0];
+    return comp;
+}
 @end

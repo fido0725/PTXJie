@@ -14,7 +14,7 @@
 @property (nonatomic) NSInteger month;
 @property (nonatomic) NSInteger day;
 @property (nonatomic) NSInteger weekday;//1星期日 7星期六
-@property (nonatomic) NSString *weekOfMonth;
+@property (nonatomic) NSInteger weekOfMonth;
 ///农历
 @property (nonatomic,strong) NSString *cn_year;
 @property (nonatomic,strong) NSString *cn_month;
@@ -24,5 +24,12 @@
 ///二十四节气
 @property (nonatomic,strong) NSString *cn_solar;
 
+///与今天差距 正数为后天，负数为前天，0为当天
+@property (nonatomic) NSInteger detalDays;
 
+-(id)initWithDate:(NSDate *)date;
++(instancetype)current;
+-(void)dayBeforeCurrentWithDays:(NSInteger)days orNot:(BOOL)enable;
+-(NSArray *)currentMonth;
+-(NSArray *)allMonth;
 @end

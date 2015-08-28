@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bEM-Yb-tyn">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Hde-w2-3Hj">
+            <objects>
+                <navigationController id="bEM-Yb-tyn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YhF-mg-Ypc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gyQ-d1-88n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EF-xS-vbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="272"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -15,12 +33,77 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YeQ-Yh-qVB">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="np8-KJ-whg">
+                                    <size key="itemSize" width="42" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="mIV-c5-CKP" customClass="CalendarCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sod-nK-yuY" userLabel="day">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywh-pH-4w6" userLabel="lunar">
+                                                    <rect key="frame" x="0.0" y="32" width="42" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Ywh-pH-4w6" secondAttribute="trailing" constant="-8" id="4B6-Kb-KTA"/>
+                                            <constraint firstItem="sod-nK-yuY" firstAttribute="top" secondItem="mIV-c5-CKP" secondAttribute="topMargin" constant="-8" id="96o-z7-f4Q"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="sod-nK-yuY" secondAttribute="trailing" constant="-8" id="Aj6-Ic-R9p"/>
+                                            <constraint firstItem="sod-nK-yuY" firstAttribute="leading" secondItem="mIV-c5-CKP" secondAttribute="leadingMargin" constant="-8" id="SEr-5m-nH8"/>
+                                            <constraint firstItem="Ywh-pH-4w6" firstAttribute="top" secondItem="sod-nK-yuY" secondAttribute="bottom" id="cll-hh-5wa"/>
+                                            <constraint firstItem="Ywh-pH-4w6" firstAttribute="leading" secondItem="mIV-c5-CKP" secondAttribute="leadingMargin" constant="-8" id="d7f-k4-2QU"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Ywh-pH-4w6" secondAttribute="bottom" constant="-8" id="fzZ-Y1-8zm"/>
+                                        </constraints>
+                                        <size key="customSize" width="42" height="50"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="sod-nK-yuY" id="kTh-ti-IiR"/>
+                                            <outlet property="lunarLabel" destination="Ywh-pH-4w6" id="BIK-jY-yHv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iCc-5W-hp8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1O4-bF-c0n"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YeQ-Yh-qVB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="NtL-zt-hzU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YeQ-Yh-qVB" secondAttribute="trailing" constant="-16" id="X3j-VU-NOm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YeQ-Yh-qVB" secondAttribute="bottom" id="dW0-bO-HDu"/>
+                            <constraint firstItem="YeQ-Yh-qVB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="gV2-X8-4PV"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="J9d-7j-OlG"/>
+                    <connections>
+                        <outlet property="collectionView" destination="YeQ-Yh-qVB" id="CCL-6u-Jsa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.53333333333333" y="294.41333333333336"/>
+            <point key="canvasLocation" x="144" y="272"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

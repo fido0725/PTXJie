@@ -32,7 +32,14 @@
     [mdict setValue:lmonth forKey:LunarMonth];
     
     NSInteger day = self.day;
-    NSString *lday = _riZi[day];
+    NSString *lday;
+    if (day==1) {
+        lday = [lmonth stringByAppendingString:@"月"];
+    }
+    else
+    {
+        lday = _riZi[day];
+    }
     [mdict setValue:lday forKey:LunarDay];
     
     return (NSDictionary *)mdict;

@@ -16,6 +16,7 @@
 {
     @private
     NSDate *_shareDate;
+    PtxCalendar *_calendarModel;
 }
 @end
 
@@ -25,6 +26,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     _shareDate = [self fixDate];
+    _calendarModel = [[PtxCalendar alloc] initWithDate:_shareDate];
 }
 
 - (void)tearDown {
@@ -79,6 +81,18 @@
     return fixdate;
 }
 
+-(NSDate *)otherDate
+{
+    NSCalendar *calendar = [NSDate  shareCalendarGeo];
+    NSCalendarUnit flag = NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
+    NSDateComponents *component = [[NSDateComponents alloc] init];
+    component.year = 2015;
+    component.month = 7;
+    component.day = 26;
+    NSDate *fixdate = [calendar dateFromComponents:component];
+    return fixdate;
+}
+
 -(void)testThatSetFirstWeedDayMonday
 {
     NSInteger firstweekday = [_shareDate setFirstWeekDayWithIt:2];
@@ -119,13 +133,13 @@
     XCTAssertTrue(firstComp.weekOfMonth == 1);
 }
 
--(void)testAllWeeksThisMonth
+-(void)testThatAllWeeksThisMonth
 {
     NSInteger weeks = [_shareDate allWeeksThisMonth];
     XCTAssertTrue(weeks == 6);
 }
 
--(void)testPreferTimeAfterNumDays
+-(void)testThatPreferTimeAfterNumDays
 {
     NSDate *date = [_shareDate specialDayAfterTodayWithNum:2];
    NSDateComponents *component = [date YMDcomponent];
@@ -136,7 +150,7 @@
     XCTAssertTrue(component.weekOfMonth == 5);
 }
 
--(void)testPreferTimeBeforNumDays
+-(void)testThatPreferTimeBeforNumDays
 {
     NSDate *date = [_shareDate specialDayBeforeTodayWithNum:2];
     NSDateComponents *component = [date YMDcomponent];
@@ -147,10 +161,48 @@
     XCTAssertTrue(component.weekOfMonth == 5);
 }
 
--(void)testLunarDay
+-(void)testThatLunarDay
 {
     NSDateComponents *lunarComp = [_shareDate YMDLunarComponent];
     NSDictionary *dict = [lunarComp lunar];
     XCTAssertNotNil(dict,"lunar is %@年 %@月 %@",dict[LunarYear],dict[LunarMonth],dict[LunarDay]);
+}
+
+-(void)testThatDetalDaysBetweenDates
+{
+    NSDate *startDate = [self fixDate];
+    NSDate *otherDate = [self otherDate];
+    NSDateComponents *comp = [startDate daysCompareWithDate:otherDate];
+    XCTAssertTrue(comp.day==-31,"days=%ld",comp.day);
+  //  XCTAssertTrue(comp.month==-1,"months=%d",comp.month);
+}
+
+-(void)testPtxCalendarThatCurrent
+{
+    XCTAssert(_calendarModel.year == 2015,"%@",_calendarModel.year);
+    XCTAssert(_calendarModel.month == 8,"%@",_calendarModel.month);
+    XCTAssert(_calendarModel.day == 26,"%@",_calendarModel.day);
+}
+
+-(void)testPtxCalendarThatCurrentMonth
+{
+    NSArray *days = [_calendarModel currentMonth];
+    XCTAssert(days.count == 31,"%@",days[0]);
+}
+
+-(void)testPtxCalendarThatAllMonth
+{
+    NSArray *months = [_calendarModel allMonth];
+    PtxCalendar *eightMonth = months[7][25];
+    XCTAssert(months.count == 12);
+    XCTAssert(eightMonth.day == 26);
+}
+
+-(void)testPtxCalendarThatSomeday
+{
+    [_calendarModel dayBeforeCurrentWithDays:1 orNot:YES];
+    XCTAssert(_calendarModel.day == 25);
+    [_calendarModel dayBeforeCurrentWithDays:1 orNot:NO];
+    XCTAssert(_calendarModel.day == 26);
 }
 @end
