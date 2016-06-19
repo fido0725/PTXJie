@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TabooNormal.h"
 
 @interface PtxCalendar : NSObject
 
@@ -23,6 +24,8 @@
 @property (nonatomic,strong) NSString *cn_holiday;
 ///二十四节气
 @property (nonatomic,strong) NSString *cn_solar;
+
+@property (nonatomic,strong) TabooNormal *tabooNormal;
 
 ///与今天差距 正数为后天，负数为前天，0为当天
 @property (nonatomic) NSInteger detalDays;

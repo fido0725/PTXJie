@@ -9,9 +9,13 @@
 #import "PtxCalendar.h"
 #import "NSDate+CalendarConvert.h"
 #import "NSDateComponents+PtxLunar.h"
+#import "Store.h"
+#import "TabooNormal.h"
 
 @interface PtxCalendar()
 @property (nonatomic,strong)  NSDate *currentDate;
+@property (nonatomic,strong) Store *store;
+@property (nonatomic,strong) NSManagedObjectContext *privateContext;
 @end
 
 @implementation PtxCalendar
@@ -20,6 +24,8 @@
 {
     self = [super init];
     if (self) {
+        self.store = [[Store alloc]init];
+        self.privateContext = self.store.newPrivateContext;
         [self calendarWithDate:nil];
     }
     return self;
@@ -72,8 +78,39 @@
     self.cn_month = lunarDict[LunarMonth];
     self.cn_day = lunarDict[LunarDay];
     
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"month == %@ AND day == %@", @"正月",@"初三"];//self.cn_month,self.cn_day];
+    [fetchRequest setPredicate:predicate];
+    NSEntityDescription *entity;
+    NSArray *fetchedObjects;
+    NSError *error = nil;
+    if ([NSThread currentThread] != [NSThread mainThread]) {
+        entity = [NSEntityDescription entityForName:@"TabooNormal" inManagedObjectContext:self.privateContext];
+        [fetchRequest setEntity:entity];
+
+        fetchedObjects = [self.privateContext executeFetchRequest:fetchRequest error:&error];
+
+    }
+    else
+    {
+        entity = [NSEntityDescription entityForName:@"TabooNormal" inManagedObjectContext:self.store.mainManagedObjectContext];
+        [fetchRequest setEntity:entity];
+
+        fetchedObjects = [self.store.mainManagedObjectContext executeFetchRequest:fetchRequest error:&error];
+        
+    }
+    if (fetchedObjects == nil || fetchedObjects.count == 0) {
+        self.tabooNormal = nil;
+    }
+    else
+    {
+       self.tabooNormal = fetchedObjects[0];
+    }
     //self.detalDays = [_currentDate daysCompareWithDate:tempDate].day;
 }
+
+
 
 -(void)dayBeforeCurrentWithDays:(NSInteger)days orNot:(BOOL)enable
 {

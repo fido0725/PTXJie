@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */; };
+		31F54B461D1687EB002A70A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B451D1687EB002A70A0 /* TableViewController.m */; };
+		31F54B491D168CC2002A70A0 /* TabooInYear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B471D168CC2002A70A0 /* TabooInYear.xcdatamodeld */; };
+		31F54B4D1D168E1B002A70A0 /* TabooInYear.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31F54B4C1D168E1B002A70A0 /* TabooInYear.txt */; };
+		31F54B501D168E62002A70A0 /* NSString+ParseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B4E1D168E62002A70A0 /* NSString+ParseCSV.m */; };
+		31F54B531D168EBF002A70A0 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B521D168EBF002A70A0 /* Store.m */; };
+		31F54B551D168F0A002A70A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F54B541D168F0A002A70A0 /* CoreData.framework */; };
+		31F54B591D168F8E002A70A0 /* TabooNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B581D168F8E002A70A0 /* TabooNormal.m */; };
+		31F54B5C1D169274002A70A0 /* Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B5A1D169274002A70A0 /* Reader.m */; };
+		31F54B5F1D169421002A70A0 /* NSData+EnumerateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B5D1D169421002A70A0 /* NSData+EnumerateComponents.m */; };
 		5F18144A1B8708A5004E3810 /* PtxCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1814491B8708A5004E3810 /* PtxCalendarTests.m */; };
 		5FA4BDA21B8D563600ADCFFB /* NSDate+CalendarConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4BDA11B8D563600ADCFFB /* NSDate+CalendarConvert.m */; };
 		5FE2A3E01B84714F001F53F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A3DF1B84714F001F53F3 /* main.m */; };
@@ -34,6 +43,21 @@
 /* Begin PBXFileReference section */
 		3199329D1B8E18810006A942 /* NSDateComponents+PtxLunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+PtxLunar.h"; sourceTree = "<group>"; };
 		3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+PtxLunar.m"; sourceTree = "<group>"; };
+		31F54B441D1687EB002A70A0 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		31F54B451D1687EB002A70A0 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		31F54B481D168CC2002A70A0 /* TabooInYear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TabooInYear.xcdatamodel; sourceTree = "<group>"; };
+		31F54B4C1D168E1B002A70A0 /* TabooInYear.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TabooInYear.txt; path = PtxJIE/TabooInYear.txt; sourceTree = "<group>"; };
+		31F54B4E1D168E62002A70A0 /* NSString+ParseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ParseCSV.m"; sourceTree = "<group>"; };
+		31F54B4F1D168E62002A70A0 /* NSString+ParseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ParseCSV.h"; sourceTree = "<group>"; };
+		31F54B511D168EBE002A70A0 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = Models/Store.h; sourceTree = "<group>"; };
+		31F54B521D168EBF002A70A0 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Store.m; path = Models/Store.m; sourceTree = "<group>"; };
+		31F54B541D168F0A002A70A0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		31F54B571D168F8E002A70A0 /* TabooNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabooNormal.h; sourceTree = "<group>"; };
+		31F54B581D168F8E002A70A0 /* TabooNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooNormal.m; sourceTree = "<group>"; };
+		31F54B5A1D169274002A70A0 /* Reader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reader.m; sourceTree = "<group>"; };
+		31F54B5B1D169274002A70A0 /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; };
+		31F54B5D1D169421002A70A0 /* NSData+EnumerateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EnumerateComponents.m"; sourceTree = "<group>"; };
+		31F54B5E1D169421002A70A0 /* NSData+EnumerateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EnumerateComponents.h"; sourceTree = "<group>"; };
 		5F1814491B8708A5004E3810 /* PtxCalendarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PtxCalendarTests.m; sourceTree = "<group>"; };
 		5FA4BDA01B8D563600ADCFFB /* NSDate+CalendarConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+CalendarConvert.h"; path = "Category/NSDate+CalendarConvert.h"; sourceTree = "<group>"; };
 		5FA4BDA11B8D563600ADCFFB /* NSDate+CalendarConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CalendarConvert.m"; path = "Category/NSDate+CalendarConvert.m"; sourceTree = "<group>"; };
@@ -63,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F54B551D168F0A002A70A0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31F54B561D168F47002A70A0 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				31F54B541D168F0A002A70A0 /* CoreData.framework */,
+			);
+			name = FrameWork;
+			sourceTree = "<group>";
+		};
 		5FA4BDA31B8D563C00ADCFFB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				31F54B4E1D168E62002A70A0 /* NSString+ParseCSV.m */,
+				31F54B4F1D168E62002A70A0 /* NSString+ParseCSV.h */,
 				5FA4BDA01B8D563600ADCFFB /* NSDate+CalendarConvert.h */,
 				5FA4BDA11B8D563600ADCFFB /* NSDate+CalendarConvert.m */,
 				3199329D1B8E18810006A942 /* NSDateComponents+PtxLunar.h */,
@@ -90,7 +125,9 @@
 		5FE2A3D11B84714F001F53F3 = {
 			isa = PBXGroup;
 			children = (
+				31F54B561D168F47002A70A0 /* FrameWork */,
 				5FE2A3DC1B84714F001F53F3 /* PtxJIE */,
+				31F54B4C1D168E1B002A70A0 /* TabooInYear.txt */,
 				5FE2A3F61B84714F001F53F3 /* PtxJIETests */,
 				5FE2A3DB1B84714F001F53F3 /* Products */,
 			);
@@ -112,17 +149,26 @@
 				5FE2A4031B8473A0001F53F3 /* Controllers */,
 				5FE2A4041B8473A0001F53F3 /* Models */,
 				5FE2A4061B8473A0001F53F3 /* Views */,
+				31F54B511D168EBE002A70A0 /* Store.h */,
+				31F54B521D168EBF002A70A0 /* Store.m */,
 				5FE2A3E11B84714F001F53F3 /* AppDelegate.h */,
 				5FE2A3E21B84714F001F53F3 /* AppDelegate.m */,
 				5FE2A3E41B84714F001F53F3 /* ViewController.h */,
 				5FE2A3E51B84714F001F53F3 /* ViewController.m */,
 				5FEDECC31B90581D0062655D /* CalendarCollectionViewCell.h */,
 				5FEDECC41B90581D0062655D /* CalendarCollectionViewCell.m */,
+				31F54B441D1687EB002A70A0 /* TableViewController.h */,
+				31F54B451D1687EB002A70A0 /* TableViewController.m */,
+				31F54B5A1D169274002A70A0 /* Reader.m */,
+				31F54B5B1D169274002A70A0 /* Reader.h */,
+				31F54B5D1D169421002A70A0 /* NSData+EnumerateComponents.m */,
+				31F54B5E1D169421002A70A0 /* NSData+EnumerateComponents.h */,
 				5FE2A3E71B84714F001F53F3 /* Main.storyboard */,
 				5FE2A3EA1B84714F001F53F3 /* Images.xcassets */,
 				5FE2A3EC1B84714F001F53F3 /* LaunchScreen.xib */,
 				5FE2A3DD1B84714F001F53F3 /* Supporting Files */,
 				5FA4BDA31B8D563C00ADCFFB /* Category */,
+				31F54B471D168CC2002A70A0 /* TabooInYear.xcdatamodeld */,
 			);
 			path = PtxJIE;
 			sourceTree = "<group>";
@@ -165,6 +211,8 @@
 		5FE2A4041B8473A0001F53F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				31F54B571D168F8E002A70A0 /* TabooNormal.h */,
+				31F54B581D168F8E002A70A0 /* TabooNormal.m */,
 				5FE2A4051B8473A0001F53F3 /* NetWorks */,
 				5FE2A40E1B848636001F53F3 /* PtxCalendar.h */,
 				5FE2A40F1B848636001F53F3 /* PtxCalendar.m */,
@@ -276,6 +324,7 @@
 			files = (
 				5FE2A3E91B84714F001F53F3 /* Main.storyboard in Resources */,
 				5FE2A3EE1B84714F001F53F3 /* LaunchScreen.xib in Resources */,
+				31F54B4D1D168E1B002A70A0 /* TabooInYear.txt in Resources */,
 				5FE2A3EB1B84714F001F53F3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,13 +343,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F54B501D168E62002A70A0 /* NSString+ParseCSV.m in Sources */,
 				5FEDECC51B90581D0062655D /* CalendarCollectionViewCell.m in Sources */,
+				31F54B5C1D169274002A70A0 /* Reader.m in Sources */,
+				31F54B5F1D169421002A70A0 /* NSData+EnumerateComponents.m in Sources */,
 				3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */,
+				31F54B491D168CC2002A70A0 /* TabooInYear.xcdatamodeld in Sources */,
 				5FE2A3E61B84714F001F53F3 /* ViewController.m in Sources */,
 				5FA4BDA21B8D563600ADCFFB /* NSDate+CalendarConvert.m in Sources */,
 				5FE2A3E31B84714F001F53F3 /* AppDelegate.m in Sources */,
 				5FE2A4101B848636001F53F3 /* PtxCalendar.m in Sources */,
+				31F54B531D168EBF002A70A0 /* Store.m in Sources */,
 				5FE2A3E01B84714F001F53F3 /* main.m in Sources */,
+				31F54B591D168F8E002A70A0 /* TabooNormal.m in Sources */,
+				31F54B461D1687EB002A70A0 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		31F54B471D168CC2002A70A0 /* TabooInYear.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				31F54B481D168CC2002A70A0 /* TabooInYear.xcdatamodel */,
+			);
+			currentVersion = 31F54B481D168CC2002A70A0 /* TabooInYear.xcdatamodel */;
+			path = TabooInYear.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5FE2A3D21B84714F001F53F3 /* Project object */;
 }
