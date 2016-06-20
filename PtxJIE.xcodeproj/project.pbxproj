@@ -291,6 +291,7 @@
 				TargetAttributes = {
 					5FE2A3D91B84714F001F53F3 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = ZP8NT5U5CW;
 					};
 					5FE2A3F21B84714F001F53F3 = {
 						CreatedOnToolsVersion = 6.3;
@@ -485,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PtxJIE/PrefixHeader.pch";
 				INFOPLIST_FILE = PtxJIE/Info.plist;
@@ -498,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PtxJIE/PrefixHeader.pch";
 				INFOPLIST_FILE = PtxJIE/Info.plist;

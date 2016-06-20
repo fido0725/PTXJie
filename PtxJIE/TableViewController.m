@@ -29,7 +29,16 @@
     self.store = [[Store alloc]init];
     self.mainManagedContext = self.store.mainManagedObjectContext;
     self.privateManagedContext = [self.store newPrivateContext];
-    [self loadTextInCordata];
+    NSNumber *num = [[NSUserDefaults standardUserDefaults] valueForKey:@"isFirstLoad"];
+    if ([num integerValue]) {
+        self.calendar = [PtxCalendar current];
+        [self setDataSourceWithCalendar];
+        [self.tableView reloadData];
+    }
+    else
+    {
+        [self loadTextInCordata];
+    }
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

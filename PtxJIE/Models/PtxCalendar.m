@@ -80,7 +80,7 @@
     
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"month == %@ AND day == %@", @"正月",@"初三"];//self.cn_month,self.cn_day];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"month == %@ AND day == %@", [NSString stringWithFormat:@"%@月",self.cn_month],self.cn_day];
     [fetchRequest setPredicate:predicate];
     NSEntityDescription *entity;
     NSArray *fetchedObjects;
