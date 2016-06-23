@@ -16,3 +16,4 @@
 @dynamic outcome;
 
 @end
+

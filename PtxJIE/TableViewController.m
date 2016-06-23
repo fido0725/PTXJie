@@ -12,6 +12,7 @@
 #import "NSString+ParseCSV.h"
 #import "TabooNormal.h"
 #import "PtxCalendar.h"
+#import "TabooSpecial.h"
 
 @interface TableViewController ()
 @property (nonatomic,strong) Store *store;
@@ -29,7 +30,7 @@
     self.store = [[Store alloc]init];
     self.mainManagedContext = self.store.mainManagedObjectContext;
     self.privateManagedContext = [self.store newPrivateContext];
-    NSNumber *num = [[NSUserDefaults standardUserDefaults] valueForKey:@"isFirstLoad"];
+    NSNumber *num ;//= [[NSUserDefaults standardUserDefaults] valueForKey:@"isFirstLoad"];
     if ([num integerValue]) {
         self.calendar = [PtxCalendar current];
         [self setDataSourceWithCalendar];
@@ -60,17 +61,30 @@
     [self.reader enumerateLinesWithBlock:^(NSUInteger lineNumber, NSString *line) {
         NSArray *array = [line csvComponents];
         if (array.count == 1) {
-            month = array[0];
+            month = array[0];//xxx月或特殊日
             return ;
         }
-        NSEntityDescription *entityDes = [NSEntityDescription entityForName:@"TabooNormal" inManagedObjectContext:self.privateManagedContext];
-        TabooNormal *taboo = (TabooNormal *)[[NSManagedObject alloc]initWithEntity:entityDes insertIntoManagedObjectContext:self.privateManagedContext];
-        taboo.month = month;
-        taboo.day = array[0];
-        taboo.origins = array[1];
-        taboo.outcome = array[2];
-        [managedObjects addObject:taboo];
-        if (lineNumber%3 == 0) {
+        NSRange monthRang = [month rangeOfString:@"月"];
+        if (monthRang.location != NSNotFound) {
+            NSEntityDescription *entityDes = [NSEntityDescription entityForName:@"TabooNormal" inManagedObjectContext:self.privateManagedContext];
+            TabooNormal *taboo = (TabooNormal *)[[NSManagedObject alloc]initWithEntity:entityDes insertIntoManagedObjectContext:self.privateManagedContext];
+            taboo.month = month;
+            taboo.day = array[0];
+            taboo.origins = array[1];
+            taboo.outcome = array[2];
+            [managedObjects addObject:taboo];
+
+        }
+        else
+        {
+            NSEntityDescription *entityDes = [NSEntityDescription entityForName:@"TabooSpecial" inManagedObjectContext:self.privateManagedContext];
+            TabooSpecial *taboo = (TabooSpecial *)[[NSManagedObject alloc]initWithEntity:entityDes insertIntoManagedObjectContext:self.privateManagedContext];
+            taboo.day = array[0];
+            taboo.month = array[1];
+            taboo.year = array[2];
+            [managedObjects addObject:taboo];
+        }
+        if (lineNumber%30 == 0) {
             [self.privateManagedContext save:NULL];
             [managedObjects removeAllObjects];
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3156284F1D1C2B6A00BC06F1 /* TabooSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = 3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */; };
 		3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */; };
 		31F54B461D1687EB002A70A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B451D1687EB002A70A0 /* TableViewController.m */; };
 		31F54B491D168CC2002A70A0 /* TabooInYear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B471D168CC2002A70A0 /* TabooInYear.xcdatamodeld */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3156284D1D1C2B6A00BC06F1 /* TabooSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabooSpecial.h; sourceTree = "<group>"; };
+		3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooSpecial.m; sourceTree = "<group>"; };
 		3199329D1B8E18810006A942 /* NSDateComponents+PtxLunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+PtxLunar.h"; sourceTree = "<group>"; };
 		3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+PtxLunar.m"; sourceTree = "<group>"; };
 		31F54B441D1687EB002A70A0 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 			children = (
 				31F54B571D168F8E002A70A0 /* TabooNormal.h */,
 				31F54B581D168F8E002A70A0 /* TabooNormal.m */,
+				3156284D1D1C2B6A00BC06F1 /* TabooSpecial.h */,
+				3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */,
 				5FE2A4051B8473A0001F53F3 /* NetWorks */,
 				5FE2A40E1B848636001F53F3 /* PtxCalendar.h */,
 				5FE2A40F1B848636001F53F3 /* PtxCalendar.m */,
@@ -345,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F54B501D168E62002A70A0 /* NSString+ParseCSV.m in Sources */,
+				3156284F1D1C2B6A00BC06F1 /* TabooSpecial.m in Sources */,
 				5FEDECC51B90581D0062655D /* CalendarCollectionViewCell.m in Sources */,
 				31F54B5C1D169274002A70A0 /* Reader.m in Sources */,
 				31F54B5F1D169421002A70A0 /* NSData+EnumerateComponents.m in Sources */,

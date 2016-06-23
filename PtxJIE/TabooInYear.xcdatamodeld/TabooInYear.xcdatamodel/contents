@@ -6,7 +6,13 @@
         <attribute name="origins" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="outcome" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="TabooSpecial" syncable="YES">
+        <attribute name="day" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="month" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="TabooNormal" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="TabooSpecial" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>
