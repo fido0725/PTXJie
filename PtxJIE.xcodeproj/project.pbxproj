@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3156284F1D1C2B6A00BC06F1 /* TabooSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = 3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */; };
+		315628581D2C023E00BC06F1 /* LunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 315628571D2C023E00BC06F1 /* LunarCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3156285B1D2C18A800BC06F1 /* TabooSolar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3156285A1D2C18A800BC06F1 /* TabooSolar.m */; };
+		3156285E1D2C19C400BC06F1 /* TabooComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3156285D1D2C19C400BC06F1 /* TabooComparator.m */; };
 		3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */; };
 		31F54B461D1687EB002A70A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B451D1687EB002A70A0 /* TableViewController.m */; };
 		31F54B491D168CC2002A70A0 /* TabooInYear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B471D168CC2002A70A0 /* TabooInYear.xcdatamodeld */; };
@@ -44,6 +47,12 @@
 /* Begin PBXFileReference section */
 		3156284D1D1C2B6A00BC06F1 /* TabooSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabooSpecial.h; sourceTree = "<group>"; };
 		3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooSpecial.m; sourceTree = "<group>"; };
+		315628561D2C023E00BC06F1 /* LunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunarCalendar.h; sourceTree = "<group>"; };
+		315628571D2C023E00BC06F1 /* LunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarCalendar.m; sourceTree = "<group>"; };
+		315628591D2C18A800BC06F1 /* TabooSolar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabooSolar.h; sourceTree = "<group>"; };
+		3156285A1D2C18A800BC06F1 /* TabooSolar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooSolar.m; sourceTree = "<group>"; };
+		3156285C1D2C19C400BC06F1 /* TabooComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabooComparator.h; sourceTree = "<group>"; };
+		3156285D1D2C19C400BC06F1 /* TabooComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooComparator.m; sourceTree = "<group>"; };
 		3199329D1B8E18810006A942 /* NSDateComponents+PtxLunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+PtxLunar.h"; sourceTree = "<group>"; };
 		3199329E1B8E18810006A942 /* NSDateComponents+PtxLunar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+PtxLunar.m"; sourceTree = "<group>"; };
 		31F54B441D1687EB002A70A0 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -218,9 +227,15 @@
 				31F54B581D168F8E002A70A0 /* TabooNormal.m */,
 				3156284D1D1C2B6A00BC06F1 /* TabooSpecial.h */,
 				3156284E1D1C2B6A00BC06F1 /* TabooSpecial.m */,
+				315628591D2C18A800BC06F1 /* TabooSolar.h */,
+				3156285A1D2C18A800BC06F1 /* TabooSolar.m */,
 				5FE2A4051B8473A0001F53F3 /* NetWorks */,
 				5FE2A40E1B848636001F53F3 /* PtxCalendar.h */,
 				5FE2A40F1B848636001F53F3 /* PtxCalendar.m */,
+				315628561D2C023E00BC06F1 /* LunarCalendar.h */,
+				315628571D2C023E00BC06F1 /* LunarCalendar.m */,
+				3156285C1D2C19C400BC06F1 /* TabooComparator.h */,
+				3156285D1D2C19C400BC06F1 /* TabooComparator.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,12 +306,11 @@
 		5FE2A3D21B84714F001F53F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = fido0725;
 				TargetAttributes = {
 					5FE2A3D91B84714F001F53F3 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = ZP8NT5U5CW;
 					};
 					5FE2A3F21B84714F001F53F3 = {
 						CreatedOnToolsVersion = 6.3;
@@ -355,9 +369,12 @@
 				31F54B5C1D169274002A70A0 /* Reader.m in Sources */,
 				31F54B5F1D169421002A70A0 /* NSData+EnumerateComponents.m in Sources */,
 				3199329F1B8E18810006A942 /* NSDateComponents+PtxLunar.m in Sources */,
+				315628581D2C023E00BC06F1 /* LunarCalendar.m in Sources */,
 				31F54B491D168CC2002A70A0 /* TabooInYear.xcdatamodeld in Sources */,
 				5FE2A3E61B84714F001F53F3 /* ViewController.m in Sources */,
+				3156285B1D2C18A800BC06F1 /* TabooSolar.m in Sources */,
 				5FA4BDA21B8D563600ADCFFB /* NSDate+CalendarConvert.m in Sources */,
+				3156285E1D2C19C400BC06F1 /* TabooComparator.m in Sources */,
 				5FE2A3E31B84714F001F53F3 /* AppDelegate.m in Sources */,
 				5FE2A4101B848636001F53F3 /* PtxCalendar.m in Sources */,
 				31F54B531D168EBF002A70A0 /* Store.m in Sources */,
@@ -427,6 +444,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -498,6 +516,7 @@
 				INFOPLIST_FILE = PtxJIE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -512,6 +531,7 @@
 				INFOPLIST_FILE = PtxJIE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -530,6 +550,7 @@
 				);
 				INFOPLIST_FILE = PtxJIETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PtxJIE.app/PtxJIE";
 			};
@@ -545,6 +566,7 @@
 				);
 				INFOPLIST_FILE = PtxJIETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ptx.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PtxJIE.app/PtxJIE";
 			};

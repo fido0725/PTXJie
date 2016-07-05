@@ -23,6 +23,7 @@
         }
         [scanner scanString:separator intoString:NULL];
         [components addObject:result];
+        result = @"";
     }
     return components;
 }

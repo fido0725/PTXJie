@@ -13,6 +13,8 @@
 #import "TabooNormal.h"
 #import "PtxCalendar.h"
 #import "TabooSpecial.h"
+#import "LunarCalendar.h"
+#import "TabooSolar.h"
 
 @interface TableViewController ()
 @property (nonatomic,strong) Store *store;
@@ -79,9 +81,10 @@
         {
             NSEntityDescription *entityDes = [NSEntityDescription entityForName:@"TabooSpecial" inManagedObjectContext:self.privateManagedContext];
             TabooSpecial *taboo = (TabooSpecial *)[[NSManagedObject alloc]initWithEntity:entityDes insertIntoManagedObjectContext:self.privateManagedContext];
-            taboo.day = array[0];
-            taboo.month = array[1];
-            taboo.year = array[2];
+            NSInteger count = array.count;
+            taboo.day =count>0? array[0]:@"";
+            taboo.month =count>1? array[1]:@"";
+            taboo.year = count>2? array[2]:@"";
             [managedObjects addObject:taboo];
         }
         if (lineNumber%30 == 0) {
@@ -90,6 +93,7 @@
         }
     } completionHandler:^(NSUInteger numberOfLines) {
         [self.privateManagedContext save:NULL];
+        [self loadSolarData];
         [[NSUserDefaults standardUserDefaults] setValue:@1 forKey:@"isFirstLoad"];
         [[NSUserDefaults standardUserDefaults] synchronize];
             self.calendar = [PtxCalendar current];
@@ -99,6 +103,28 @@
             [self.tableView reloadData];
         });
     }];
+
+}
+
+-(void)loadSolarData
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy"];
+   NSString *year = [formatter stringFromDate:date];
+    LunarCalendar *lunarCalendar = [[LunarCalendar alloc]init];
+    NSArray *list;
+    [lunarCalendar ComputeSolarTermForYear:[year intValue] intoList:&list];
+    NSMutableArray *managedObjects = [NSMutableArray array];
+    for (NSDictionary *dict in list) {
+        NSEntityDescription *entityDes = [NSEntityDescription entityForName:@"TabooSolar" inManagedObjectContext:[NSThread isMainThread]?self.mainManagedContext:self.privateManagedContext];
+        TabooSolar *taboo = (TabooSolar *)[[NSManagedObject alloc]initWithEntity:entityDes insertIntoManagedObjectContext:[NSThread isMainThread]?self.mainManagedContext:self.privateManagedContext];
+        taboo.solarDate = dict[@"solarDate"];
+        taboo.solarName = dict[@"solarName"];
+        [managedObjects addObject:taboo];
+    }
+    NSManagedObjectContext *managedContext = [NSThread isMainThread]?self.mainManagedContext:self.privateManagedContext;
+        [managedContext save:NULL];
 }
 
 -(NSMutableArray *)dataSource
