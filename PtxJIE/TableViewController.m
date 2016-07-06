@@ -32,7 +32,7 @@
     self.store = [[Store alloc]init];
     self.mainManagedContext = self.store.mainManagedObjectContext;
     self.privateManagedContext = [self.store newPrivateContext];
-    NSNumber *num ;//= [[NSUserDefaults standardUserDefaults] valueForKey:@"isFirstLoad"];
+    NSNumber *num = [[NSUserDefaults standardUserDefaults] valueForKey:@"isFirstLoad"];
     if ([num integerValue]) {
         self.calendar = [PtxCalendar current];
         [self setDataSourceWithCalendar];

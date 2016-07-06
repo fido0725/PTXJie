@@ -21,6 +21,7 @@
 		31F54B591D168F8E002A70A0 /* TabooNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B581D168F8E002A70A0 /* TabooNormal.m */; };
 		31F54B5C1D169274002A70A0 /* Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B5A1D169274002A70A0 /* Reader.m */; };
 		31F54B5F1D169421002A70A0 /* NSData+EnumerateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F54B5D1D169421002A70A0 /* NSData+EnumerateComponents.m */; };
+		5F0A35EF1D2CF96700C819C3 /* TabooComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A35EE1D2CF96700C819C3 /* TabooComparator.m */; };
 		5F18144A1B8708A5004E3810 /* PtxCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1814491B8708A5004E3810 /* PtxCalendarTests.m */; };
 		5FA4BDA21B8D563600ADCFFB /* NSDate+CalendarConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4BDA11B8D563600ADCFFB /* NSDate+CalendarConvert.m */; };
 		5FE2A3E01B84714F001F53F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A3DF1B84714F001F53F3 /* main.m */; };
@@ -70,6 +71,7 @@
 		31F54B5B1D169274002A70A0 /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; };
 		31F54B5D1D169421002A70A0 /* NSData+EnumerateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+EnumerateComponents.m"; sourceTree = "<group>"; };
 		31F54B5E1D169421002A70A0 /* NSData+EnumerateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+EnumerateComponents.h"; sourceTree = "<group>"; };
+		5F0A35EE1D2CF96700C819C3 /* TabooComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabooComparator.m; sourceTree = "<group>"; };
 		5F1814491B8708A5004E3810 /* PtxCalendarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PtxCalendarTests.m; sourceTree = "<group>"; };
 		5FA4BDA01B8D563600ADCFFB /* NSDate+CalendarConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+CalendarConvert.h"; path = "Category/NSDate+CalendarConvert.h"; sourceTree = "<group>"; };
 		5FA4BDA11B8D563600ADCFFB /* NSDate+CalendarConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CalendarConvert.m"; path = "Category/NSDate+CalendarConvert.m"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE2A3F91B84714F001F53F3 /* PtxJIETests.m */,
+				5F0A35EE1D2CF96700C819C3 /* TabooComparator.m */,
 				5FE2A3F71B84714F001F53F3 /* Supporting Files */,
 				5F1814491B8708A5004E3810 /* PtxCalendarTests.m */,
 			);
@@ -390,6 +393,7 @@
 			files = (
 				5F18144A1B8708A5004E3810 /* PtxCalendarTests.m in Sources */,
 				5FE2A3FA1B84714F001F53F3 /* PtxJIETests.m in Sources */,
+				5F0A35EF1D2CF96700C819C3 /* TabooComparator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

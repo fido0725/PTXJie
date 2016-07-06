@@ -10,4 +10,17 @@
 
 @interface TabooComparator : NSObject
 
+-(NSString *)timeAttentionSolar:(NSString *)solarName;
+
+-(NSArray *)vernalEquinoxPeriod;
+
+-(NSArray *)autumalEquinoxPeriod;
+
+-(NSArray *)summerSolsticePeriod;
+
+-(NSArray *)winterSolsticePeriod;
+
+-(NSArray *)specialDayInSeason;
+
+-(NSArray *)specialDayBeforeSeason;
 @end
