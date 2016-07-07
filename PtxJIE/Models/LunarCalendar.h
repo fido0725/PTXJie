@@ -32,7 +32,8 @@ struct SolarTerm
 	int year;//年
 	int month;//月
 	int day;//日
-	
+    int hour;//时
+    
 	int lunarYear;	//农历年
 	int lunarMonth;	//农历月
 	int doubleMonth;	//闰月
@@ -48,7 +49,8 @@ struct SolarTerm
 	NSString *yearEarthlyBranch;//年地支
 	NSString *monthEarthlyBranch;//月地支
 	NSString *dayEarthlyBranch;//日地支
-	
+    NSString *hourEarthlyBranch;//时地支
+    
 	NSString *monthLunar;//农历月
 	NSString *dayLunar;//农历日
 	

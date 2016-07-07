@@ -87,7 +87,9 @@ int LunarCalendarInfo[] = {
 		
 		[dateFormatter setDateFormat:@"dd"];
 		day = [[dateFormatter stringFromDate:adate] intValue];
-						
+				
+        [dateFormatter setDateFormat:@"HH"];
+        hour = [[dateFormatter stringFromDate:adate]intValue];
 		thisdate = adate;
 	}
 }
@@ -226,6 +228,20 @@ int LunarCalendarInfo[] = {
 	else
 		monthEarthlyBranch = (NSString *)[EarthlyBranches objectAtIndex:(((year-1900)*12+month+13)%12-1)];
 	dayEarthlyBranch = (NSString *)[EarthlyBranches objectAtIndex:(dayCyclical%12)];
+    hourEarthlyBranch = [self hourEarthly];
+}
+
+-(NSString *)hourEarthly
+{
+    int i;
+    hour = hour!=0?:24;
+    for (i=1; i<13; i++) {
+        int gap = 2*i;
+        if (hour <= gap) {
+            break;
+        }
+    }
+    return EarthlyBranches[i-1];
 }
 
 -(NSString *)getChineseHoliday:(int)aMonth day:(int)aDay
